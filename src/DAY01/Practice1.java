@@ -1,5 +1,7 @@
 package DAY01;  //현재 클래스가 위치한 폴더명
 
+import java.util.Scanner;
+
 public class Practice1 {  //class s
     public static void main(String[] args) { //main s
         // 문제 1번
@@ -9,14 +11,14 @@ public class Practice1 {  //class s
 
         // 문제 2번
         //변수란 하나의 자료를 저장하는 메모리 공간(상자)
-        int age=25;
+        int age = 25;
         System.out.println(age);
         //문자열은 문자 그자체, 키워드(변수명,함수명,if,for등)는 프로그램이 이해하는 단어
 
         // 문제 3번 :변수는 동일한 { } 내 중복 이름이 불가능하다.
-        String name="김용성";
-        int age1=52;
-        double height=170.2;
+        String name = "김용성";
+        int age1 = 52;
+        double height = 170.2;
         String motto = "좌우명";
 
 
@@ -25,7 +27,7 @@ public class Practice1 {  //class s
         System.out.println("제 이름은 " + name + ",나이는 " + age1 + "세,키는 " + height + "cm 입니다.");
 
         //문제 5번
-        System.out.printf("제 이름은 %s,나이는 %d세,키는 %.1f cm 입니다. \n",name,age1,height);
+        System.out.printf("제 이름은 %s,나이는 %d세,키는 %.1f cm 입니다. \n", name, age1, height);
 
         //문제 6번
         System.out.println("|\\_/|");
@@ -49,12 +51,54 @@ public class Practice1 {  //class s
         String content = "안녕하세요!";
 
         System.out.printf("========방문록========\n");
-        System.out.printf("%3s %5s %20s\n","번호","작성자","방문록");   //%3s:3자리를 차지하는 문자열 자리
-        System.out.printf("%4s %5s %20s\n",num,writer,content);
+        System.out.printf("%3s %5s %20s\n", "번호", "작성자", "방문록");   //%3s:3자리를 차지하는 문자열 자리
+        System.out.printf("%4s %5s %20s\n", num, writer, content);
         System.out.printf("=======================");
-    } //main e
-} //class e
 
+
+        //문제 8번:입력받기,준비물: Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        System.out.print("이름입력:");
+        String 이름 = scan.next();
+        System.out.print("나이입력:");
+        int 나이 = scan.nextInt();
+        System.out.printf("%s님의 나이는 %d세 입니다.", 이름, 나이);
+
+
+        //문제 9번
+        System.out.print("게시물번호:");
+        int bno = scan.nextInt();
+        System.out.print("제목:");
+        scan.nextLine();
+        String title = scan.nextLine();
+        System.out.print("내용 입력:");
+        String contents = scan.nextLine();
+        System.out.printf("[%d번 게시물]\n", bno);
+        System.out.printf("제목: %s\n", title);
+        System.out.printf("내용:%s\n", contents);
+
+        //문제 10번 문자 입력받기..
+        System.out.print("10]성별:");
+        char 성별 = scan.next().charAt(0);
+        System.out.printf("입력하신 성별은 %s 입니다.\n",성별);
+
+
+        //문제 11번
+        System.out.print("[11]이름:"); String 성함= scan.next();
+        System.out.print("[11]나이:"); int 연령=scan.nextInt();
+        System.out.print("[11]키:"); double 신장=scan.nextDouble();
+        System.out.print("[11]프로그래머 여부:");  boolean 여부=scan.nextBoolean();
+        System.out.println("--------자기소개--------");
+        System.out.println("이름:"+성함);
+        System.out.println("나이:"+연령);
+        System.out.println("키:"+신장);
+        System.out.println("여부:"+여부);
+
+
+
+        //class e
+    }
+}
 
 
 

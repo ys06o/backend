@@ -1,0 +1,56 @@
+package DAY02;
+
+import java.util.Scanner;
+
+public class Practice2 { //class s
+    public static void main(String[] args) { //main s
+        /*[실습] * 제출용 */
+
+/*문제 1: a 와 b 두 변수의 합을 long 타입의 변수에 저장하여 그 결과를 출력하시오.
+선언 코드 :
+byte a = 10;
+int b = 200;
+출력 예시:
+결과: 210 */
+        byte a = 10;
+        int b = 200;
+        long sum=a+b;
+        System.out.println("문제1번:"+sum);
+
+
+/*문제 2: 실수 3.141592를 double 타입 변수에 저장한 뒤, 이 변수를 int 타입으로 강제 변환하여 정수 부분만 출력하시오.
+선언 코드 :
+double z = 3.141592;
+출력 예시:
+원본 double 값: 3.141592
+변환된 int 값: 3 */
+
+        double z = 3.141592;
+        int zResult=(int)z;
+        System.out.println("문제2번:"+zResult);
+
+/*문제 3: Scanner를 이용해 사용자의 키를 double 타입(예: 178.5)으로 입력받은 후, 이 값을 int 타입으로 강제 변환하여 "당신의 키는 약 OOOcm 이군요." 라고 정수 부분만 출력하시오.
+입력 예시:
+키를 입력하세요: 178.5
+출력 예시:
+당신의 키는 약 178cm 이군요. */
+        Scanner scan = new Scanner(System.in);
+        System.out.println("키를 입력하세요:");
+        double height = scan.nextDouble();
+        System.out.printf("당신의 키는 약 %dcm 이군요\n",(int)height);
+/*문제 4: Scanner를 이용해 서로 다른 3개의 정수를 입력받아, 이 값들의 합을 3으로 나눈 평균을 구하시오. 단, 결과는 소수점이 포함되도록 출력되어야 한다.
+입력 예시:
+첫 번째 정수 입력: 11
+두 번째 정수 입력: 21
+세 번째 정수 입력: 21
+출력 예시:
+평균 결과: 17.666666666666668 */
+        System.out.print("정수1: ");  int 정수1=scan.nextInt();
+        System.out.print("정수2: ");  int 정수2=scan.nextInt();
+        System.out.print("정수3: ");  int 정수3=scan.nextInt();
+        double 평균=(정수1+정수2+정수3)/3.0;  //int 평균=(정수1+정수2+정수3)/3
+        //가장 가까운 변수 출력= soutv
+        System.out.println("평균 = " + 평균);
+
+    }  //main e
+} //class e
