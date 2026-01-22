@@ -207,10 +207,10 @@ BMI 지수: 22.34... */
 등급:B */
         System.out.print("점수를 입력하세요:");
         int score15 = scan.nextInt();
-        char result15 = (score15 >= 90 ? 'A' : (score15 >= 80 ? 'B' : 'C'));
+        char result15 = score15 >= 90 ? 'A' : score15 >= 80 ? 'B' : 'C';
         System.out.println("result15 = " + result15);
 /*[문제 16] Scanner를 이용해 나이(int)를 입력받아, 20대(20세 이상 29세 이하)에 해당하는 경우 "이벤트 대상입니다."를, 그렇지 않으면 "이벤트 대상이 아닙니다."를 출력하시오.
-입력 예시:
+입력 예시: 범위 논리는 &&연산자를 사용해야한다.
 나이를 입력하세요: 25
 출력 예시:
 이벤트 대상입니다. */
