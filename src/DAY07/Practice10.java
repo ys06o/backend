@@ -13,9 +13,33 @@ public class Practice10 {
         Score score1 = new Score();
         score1.setScore(120);
 
+        //문제 3번
+        BankAccounts number1 = new BankAccounts("123-456");
+        System.out.println(number1.getAccountNumber());
+
+        //문제 4번
+        CircleCalculator circleCalculator = new CircleCalculator(5);
+        System.out.println(circleCalculator.printCircleArea());
+
+        //문제5번
+        TicketMachine machine1 = new TicketMachine();
+        TicketMachine machine2 = new TicketMachine();
+        TicketMachine machine3 = new TicketMachine();
+        machine1.issueTicket();
+        machine1.issueTicket();
+        machine2.issueTicket();
+        TicketMachine.printTotalTicket();
+
+        //문제6번
+
+        System.out.println(Gameconfig.GAME_TITLE);
+        System.out.println(Gameconfig.MAX_LEVEL);
+        System.out.println(Gameconfig.MAX_HP);
     }
 }
 
+
+//문제1번 클래스
 class Members {
  private String id;
 
@@ -50,4 +74,50 @@ class Score {
             System.out.println("유효하지 않은 점수입니다.");
         }
     }
+}
+
+class BankAccounts {
+    private String accountNumber;
+
+    public BankAccounts(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+}
+
+class CircleCalculator {
+    final double PI = 3.1459;
+    private int r;
+
+    public CircleCalculator(int r) {
+        this.r = r;
+    }
+
+    double printCircleArea() {
+        double area = r * r * PI;
+        return area;
+    }
+
+}
+
+class TicketMachine {
+    static int totalTickets=0;
+
+    void issueTicket() {
+        totalTickets++;
+        System.out.println("티켓1장을  발권했습니다.");
+    }
+
+   static void printTotalTicket() {
+       System.out.println(totalTickets);
+    }
+}
+
+class Gameconfig {
+    public static final int MAX_LEVEL=99;
+    public static final int MAX_HP=10000;
+    public static final String GAME_TITLE = "MY RPG";
 }
