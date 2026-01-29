@@ -22,12 +22,12 @@ public class Exam2 {
         //[4]DAY07 폴더내 package1
 
         A a = new A();
-        System.out.println("a.공개변수 = " + a.공개변수); //가능
-        System.out.println("a.비공개변수 = " + a.비공개변수); //에러
-        System.out.println("a.일반변수 = " + a.일반변수);
+//        System.out.println("a.공개변수 = " + a.공개변수); //가능
+//        System.out.println("a.비공개변수 = " + a.비공개변수); //에러
+//        System.out.println("a.일반변수 = " + a.일반변수);
 
         a.메소드(); //가능
-        a.비공개메소드(); //에러
+//        a.비공개메소드(); //에러
 
 
         //[5]import:다른 패키지의 클래스 호출

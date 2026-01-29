@@ -28,7 +28,7 @@ public class Exam04 {
         System.out.println(d.최종변수);
 
         //
-        D.method1(); //static이 아니라서 오류..
+//        D.method1(); //static이 아니라서 오류..
         d.method1(); //d라는 객체를 만들었긴때문에 객체변수.메소드명(); 이건가능
         D.method2(); //static이기 때문에 가능
 
