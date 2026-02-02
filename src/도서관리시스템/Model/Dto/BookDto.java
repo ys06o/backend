@@ -1,12 +1,31 @@
 package 도서관리시스템.Model.Dto;
 
 public class BookDto {
-    private int bookNo;
-    private String bookName;
-    private String bookAuthor;
-    private String bookGenre;
+    private int bookNo; //도서번호
+    private String bookName; //도서이름
+    private String bookAuthor; //도서저자
+    private String bookGenre; //도서장르
+    private int state; //도서 상태
+    private int userNo;  //빌려간 회원번호
+
 
     public BookDto(){}
+
+    public int getState() {
+        return state;
+    }
+
+    public int getUserNo() {
+        return userNo;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    public void setUserNo(int userNo) {
+        this.userNo = userNo;
+    }
 
     public int getBookNo() {
         return bookNo;

@@ -73,7 +73,8 @@ public class UserView {
     public void bookLoan() {
 
         for (BookDto book : ad.getBookDtos()) {
-            System.out.println("book = " + book);
+            System.out.printf("도서번호: %d | 제목: %s | 저자:%s 장르: %s\n",
+                    book.getBookNo(), book.getBookName(), book.getBookGenre());
         }
         System.out.print("대출할 도서번호를 입력하세요:");
         int number = scan.nextInt();

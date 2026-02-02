@@ -1,11 +1,19 @@
 package 도서관리시스템.Model.Dto;
 
+import java.util.ArrayList;
+
 public class UserDto {
     private int uno; //회원번호
     private String id; //회원아이디
     private String pw; //회원비밀번호
     private String userName;//회원이름
-    private String role;//user인지 admin인지 구분
+
+    private ArrayList<Integer> myBookNos = new ArrayList<>();  //빌린책번호 저장
+
+    public ArrayList<Integer> getMyBookNos() {
+        return myBookNos;
+    }
+
     public UserDto(){}
 
     public UserDto(int uno, String id, String pw, String userName) {

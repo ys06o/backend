@@ -51,5 +51,15 @@ public class UserDao {
     }
 
 
+    public UserDto getUser(int uno) {
+        for (UserDto user : userTable) {
+            if (user.getUno() == uno) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+
 
 }

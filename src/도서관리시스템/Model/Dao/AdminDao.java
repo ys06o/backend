@@ -32,7 +32,7 @@ public class AdminDao {
         for (int index = 0; index <= bookDtos.size() - 1; index++) {
             BookDto bookDto = bookDtos.get(index);
             if (bookDto.getBookNo() == number) {
-                bookDtos.remove(number);  //book테이블에 대출한 책 정보 지우기
+                bookDto.setState(1);
                 return true;
             }
         }

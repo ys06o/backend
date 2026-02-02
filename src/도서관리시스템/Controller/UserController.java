@@ -1,6 +1,8 @@
 package 도서관리시스템.Controller;
 
+import 도서관리시스템.Model.Dao.AdminDao;
 import 도서관리시스템.Model.Dao.UserDao;
+import 도서관리시스템.Model.Dto.BookDto;
 import 도서관리시스템.View.AdminView;
 
 public class UserController {
@@ -10,6 +12,7 @@ public class UserController {
 
     //controller->dao싱글톤 호출
     private UserDao ud = UserDao.getInstance();
+    private AdminDao ad = AdminDao.getInstance();
 
     //adminView호출
     AdminView av = AdminView.getInstance();
@@ -50,6 +53,15 @@ public class UserController {
     }
 
 
+    public void bookLoan(int bno) {
+        for (BookDto book : ad.getBookDtos()) {
+            if (book.getBookNo() == bno) {
+                book.setState(1);
+                break;
+            }
+        }
+        ud.getUser(loginSession).getMyBookNos().add(bno);
+    }
 
 
 

@@ -15,11 +15,12 @@ public class AdminView {
 
     private Scanner scan = new Scanner(System.in);
     public void adminIndex() {
-        System.out.print("1.도서등록 2.전체도서조회 3.유저정보 조회 선택>");
+        System.out.print("1.도서등록 2.전체도서조회 3.유저정보 조회 4.돌아가기 선택>");
         int ch = scan.nextInt();
         if(ch==1){bookRe();}
 //        else if(ch=2){}
 //        else if(ch==3){}
+        if(ch==4){UserView.getInstance().index();}
     }
 
     //도서 등록함수
