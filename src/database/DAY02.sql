@@ -59,7 +59,7 @@ create table test4(
 select*from test4;
 create table test5(
 속성명1 bigint,
-constraint foreign key(속성명1) references test4(속성명4) on delete set null;
+constraint foreign key(속성명1) references test4(속성명4) on delete set null
 -- foreign key:FK(참조/외래)키,다른 테이블에 기본키(pk)를 참조하는 키-- 중복가능,빈칸가능
  -- pk(1):fk(N)관계에서 수강신청한 학번,휴가신청한사번,구매한 제품번호 등등
 -- on update/delete  restrict:pk가 삭제/수정될때 fk가 **참조**중이면 삭제/수정 불가능<자식이 있으면 부모 삭제 불가능>,기본값
@@ -93,6 +93,5 @@ constraint primary key(pno),
 constraint foreign key(mno) references member(mno) on delete cascade -- 회원이 탈퇴하면 그회원의 제품도 같이 삭제
 );
 select*from product;
-
 -- ER다이어그램:여러 테이블 간의 관계를 시각적,ERD 다이어그램:데이터베이스 테이블 간의관계를 시각적
 -- 워크밴치 메뉴 상단->[database]
