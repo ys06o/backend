@@ -47,7 +47,7 @@ public class Practice12 {
     Coffee coffee = new Coffee();
     Beverage[] array1 = {coke, coffee};
 
-    for(Beverage[] ar1:array1)
+//    for(Beverage[] ar1:array1)
 
 
 }
@@ -67,13 +67,14 @@ class Student extends Person {
 //문제 2번
 class Animal {
     void makeSound() {
-
+        System.out.println("동물이 소리를 냅니다.");
     }
 }
 
 class Cat extends Animal {
+    @Override
     void makeSound() {
-        System.out.println("고양이가 야옹하고 웁니다.");
+        System.out.println("고양이가 야옹하고 웁니다.ㅌ");
     }
 }
 ///////////////////////////////
