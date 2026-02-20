@@ -59,15 +59,7 @@ public class BookDto {
         this.bookGenre = bookGenre;
     }
 
-    @Override
-    public String toString() {
-        return "BookDto{" +
-                "bookNo=" + bookNo +
-                ", bookName='" + bookName + '\'' +
-                ", bookAuthor='" + bookAuthor + '\'' +
-                ", bookGenre='" + bookGenre + '\'' +
-                '}';
-    }
+
 
     public BookDto(int bookNo, String bookName, String bookAuthor, String bookGenre) {
         this.bookNo = bookNo;
